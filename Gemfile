@@ -29,6 +29,9 @@ gem 'spring',        group: :development
 # Use Zurb Foundation for CSS framework
 gem 'foundation-rails'
 
+# Use Devise for user authentication
+gem 'devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
