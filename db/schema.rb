@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140625031107) do
+ActiveRecord::Schema.define(version: 20140625031509) do
 
   create_table "albums", force: true do |t|
     t.string   "name"
@@ -34,12 +34,21 @@ ActiveRecord::Schema.define(version: 20140625031107) do
     t.integer "user_id"
   end
 
+  create_table "note_folders", force: true do |t|
+    t.string   "name"
+    t.integer  "note_folder_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
   create_table "notes", force: true do |t|
     t.string   "title"
     t.text     "content"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "note_folder_id"
   end
 
   create_table "songs", force: true do |t|
