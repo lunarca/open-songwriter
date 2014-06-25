@@ -1,0 +1,20 @@
+<nav class="top-bar" data-topbar>
+	<ul class="title-area">
+		<li class="name">
+			<h1><a href="/">Open Songwriter</a></h1>
+		</li>
+	</ul>
+
+	<section class="top-bar-section">
+		<ul class="right">
+			<% if user_signed_in? %>
+				<li><%= link_to  "Temp" , '#'%></li> <!-- Username -->
+				<li><%= link_to  "Songs", '#' %></li>
+				<li><%= link_to  "Notes", '#' %></li>
+			<% else %>
+				<li><%= link_to "Log In", new_user_session_path %></li>
+				<li><%= link_to "Register", new_user_registration_path %></li>
+			<% end %>
+		</ul>
+	</section>
+</nav>
